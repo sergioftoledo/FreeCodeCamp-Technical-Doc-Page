@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header class="navegacion">Documentación de React</header>
+        <ul>
+            <li><a href="#React_Introducción" class="nav-link">React Introducción</a></li>
+            <li><a href="#React.JS_Historia" class="nav-link">React.JS Historia</a></li>
+            <li><a href="#Empezando_Con_React" class="nav-link">Empezando Con React</a></li>
+            <li><a href="#React_directamente_en_el_HTML" class="nav-link">React directamente en el HTML</a></li>
+            <li><a href="#Configurar_el_entorno_de_React" class="nav-link">Configurar el entorno de React</a></li>
+            <li><a href="#Correr_la_aplicación_de_React" class="nav-link">Correr la aplicación de React</a></li>
+            <li><a href="#Modificar_la_aplicación_React" class="nav-link">Modificar la aplicación React</a></li>
+            <li><a href="#Render_React_HTML" class="nav-link">Render React HTML</a></li>
+            <li><a href="#La_función_de_renderizado" class="nav-link">La función de renderizado</a></li>
+            <li><a href="#El_nodo_raíz" class="nav-link">El nodo raíz</a></li>
+            <li><a href="#Componentes_de_React" class="nav-link">Componentes de React</a></li>
+            <li><a href="#Crear_componentes" class="nav-link">Crear componentes</a></li>
+            <li><a href="#Renderizado_de_un_componente" class="nav-link">Renderizado de un componente</a></li>
+            <li><a href="#Componentes_de_la_clase_React" class="nav-link">Componentes de la clase React</a></li>
+            <li><a href="#Constructor_de_componentes" class="nav-link">Constructor de componentes</a></li>
+            <li><a href="#Eventos_de_React" class="nav-link">Eventos de React</a></li>
+            <li><a href="#referencias" class="nav-link">referencias</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="React_Introducción">
+            <header>react introducción</header>
+            <article>
+                <p>
+                    React, a veces denominado marco de JavaScript frontend, es una biblioteca de JavaScript creada por Facebook. React es una herramienta para crear componentes de interfaz de usuario.
+                </p>
+                <p>
+                    En lugar de manipular el DOM del navegador directamente, React crea un DOM virtual en la memoria, donde realiza toda la manipulación necesaria, antes de realizar los cambios en el DOM del navegador. React descubre qué cambios se han realizado y cambia solo lo que necesita cambiarse.
+                    Aprenderá los diversos aspectos de cómo React hace esto en el resto de este tutorial.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="React.JS_Historia">
+            <header>React.JS Historia</header>
+            <article>
+                <ul>
+                    <li>La versión actual de React.JS es V17.0.2 (agosto de 2021).</li>
+                    <li>El lanzamiento inicial al público (V0.3.0) fue en julio de 2013.</li>
+                    <li>React.JS se utilizó por primera vez en 2011 para la función Newsfeed de Facebook</li>
+                    <li>La versión actual de <code>create-react-app</code> es v4.0.3 (agosto de 2021).</li>
+                    <li><code>create-react-app</code> incluye herramientas integradas como webpack, Babel y ESLint.</li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Empezando_Con_React">
+            <header>empezando con React</header>
+            <article>
+                <p>
+                    To use React in production, you need npm which is included with Node.js.
+                </p>
+                <p>
+                    To get an overview of what React is, you can write React code directly in HTML. But in order to use React in production, you need npm and Node.js installed.
+                </p>
+                    
+            </article>
+        </section>
+        <section class="main-section" id="React_directamente_en_el_HTML">
+            <header>React directamente en el HTML</header>
+            <article>
+                <p>
+                    Incluye tres CDNs en tu archivo HTML:
+                </p>
+                <code>
+                    &lt;!DOCTYPE html&gt;<br>
+                    &lt;html&gt;<br>
+                      &lt;head&gt;<br>
+                        &lt;script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin&gt;&lt;/script&gt;<br>
+                        &lt;script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin>&lt;/script&gt;<br>
+                        &lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;<br>
+                      &lt;/head&gt;<br>
+                      &lt;body&gt;<br><br>
+                        &lt;div id="mydiv"&gt;&lt;/div&gt;<br><br>
+                        &lt;script type="text/babel"&gt;<br>
+                          function Hello() {<br>
+                            return &lt;h1&gt;Hello World!&lt;/h1&gt;;<br>
+                          }<br><br>
+                          ReactDOM.render(&lt;Hello /&gt;, document.getElementById('mydiv'))<br>
+                        &lt;/script&gt;<br><br>
+                      &lt;/body&gt;<br>
+                    &lt;/html&gt;<br>
+                </code>
+            </article>
+        </section>
+        <section class="main-section" id="Configurar_el_entorno_de_React">
+            <header>Configurar el entorno de React</header>
+            <article>
+                <p>
+                    Si tiene npx y Node.js instalados, puede crear una aplicación React usando <code>create-react-app</code>.
+                </p>
+                <p>
+                    Si ya lo instaló <code>create-react-app</code> globalmente, se recomienda que desinstale el paquete para asegurarse de que npx siempre use la última versión de <code>create-react-app</code>.
+                </p>
+                <p>
+                    Para desinstalar, ejecute este comando: <code>npm uninstall -g create-react-app</code>.
+                </p>
+                <p>
+                    Ejecute este comando para crear una aplicación React llamada <code>my-react-app</code>:
+                </p>
+                <p>
+                    <code>npx create-react-app my-react-app</code>
+                </p>
+                <p>
+                    El <code>create-react-app</code> configurará todo lo que necesita para ejecutar una aplicación React.
+                </p>
+                
+            </article>
+        </section>
+        <section class="main-section" id="Correr_la_aplicación_de_React">
+            <header>Correr la aplicación de React</header>
+            <article>
+                <p>
+                    ¡Ahora está listo para ejecutar su primera aplicación React real!
+                </p>
+                <p>
+                    Ejecute este comando para moverse al <code>my-react-app</code> directorio:
+                </p>
+                <p>
+                    <code>cd my-react-app</code>
+                </p>
+                <p>
+                    Ejecute este comando para ejecutar la aplicación React <code>my-react-app</code>:
+                </p>
+                <p>
+                    <code>npm start</code>
+                </p>
+                <p>
+                    ¡Aparecerá una nueva ventana del navegador con su aplicación React recién creada! Si no es así, abra su navegador y escriba <code>localhost:3000</code> en la barra de direcciones.
+                </p>
+                <p>
+                    El resultado:
+                </p>
+                <div class="imagen">
+                    <img src="https://www.w3schools.com/react/screenshot_myfirstreact.png" alt="">
+                </div>
+            </article>
+        </section>
+        <section class="main-section" id="Modificar_la_aplicación_React">
+            <header>Modificar la aplicación React</header>
+            <article>
+                <p>
+                    Hasta ahora todo bien, pero ¿cómo cambio el contenido?
+                </p>
+                <p>
+                    Busque en el <code>my-react-app</code> directorio y encontrará una <code>src</code>carpeta. Dentro de la srccarpeta hay un archivo llamado <code>App.js</code>, ábralo y se verá así:
+                </p>
+                <p>
+                    <code>
+                        import logo from './logo.svg';<br>
+                        import './App.css';<br> <br>
+                        function App() {<br>
+                        return (<br>
+                            &lt;div className="App"&gt;<br>
+                            &lt;header className="App-header"&gt;<br>
+                                &lt;img src={logo} className="App-logo" alt="logo" /&gt;<br>
+                                &lt;p&gt;<br>
+                                Edit  &lt;code>src/App.js &lt;/code> and save to reload.<br>
+                                &lt;/p&gt;<br>
+                                &lt;a<br>
+                                className="App-link"<br>
+                                href="https://reactjs.org"<br>
+                                target="_blank"<br>
+                                rel="noopener noreferrer"<br>
+                                &gt;<br>
+                                Learn React<br>
+                                &lt;/a&gt;<br>
+                            &lt;/header&gt;<br>
+                            &lt;/div&gt;<br>
+                        );<br>
+                        }<br><br>
+                        export default App;<br>
+                </code>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Render_React_HTML">
+            <header>Render React HTML</header>
+            <article>
+                <p>
+                    El objetivo de React es, de muchas formas, renderizar HTML en una página web.
+                </p>
+                <p>
+                    React renderiza HTML a la página web usando una función llamada <code>ReactDOM.render()</code>.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="La_función_de_renderizado">
+            <header>La función de renderizado</header>
+            <article>
+                <p>
+                    La función <code>ReactDOM.render()</code> toma dos argumentos, código HTML y un elemento HTML.
+                </p>
+                <p>
+                    El propósito de la función es mostrar el código HTML especificado dentro del elemento HTML especificado.
+                </p>
+                <p>
+                    Pero, ¿dónde renderizar?
+                </p>
+                <p>
+                    Hay otra carpeta en el directorio raíz de su proyecto React, llamada "pública". En esta carpeta hay un <code>index.html</code> archivo.
+                </p>
+                <p>
+                    Notarás un sencillo <code>&lt;div&gt;</code> en el cuerpo de este archivo. Aquí es donde se procesará nuestra aplicación React.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="El_nodo_raíz">
+            <header>El nodo raíz</header>
+            <article>
+                <p>
+                    El nodo raíz es el elemento HTML donde desea mostrar el resultado.
+                </p>
+                <p>
+                    Es como un contenedor de contenido administrado por React.
+                </p>
+                <p>
+                    NO tiene que ser un <code>&lt;div&gt;</code> elemento y NO tiene que tener <code>id='root'</code>:
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Componentes_de_React">
+            <header>Componentes de React</header>
+            <article>
+                <p>
+                    Los componentes son bits de código independientes y reutilizables. Tienen el mismo propósito que las funciones de JavaScript, pero funcionan de forma aislada y devuelven HTML.
+                </p>
+                    Los componentes vienen en dos tipos, componentes de clase y componentes de función, en este tutorial nos concentraremos en los componentes de función.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Crear_componentes">
+            <header>Crear componentes</header>
+            <article>
+                <p>
+                    Al crear un componente de React, el nombre del componente DEBE comenzar con una letra mayúscula.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Renderizado_de_un_componente">
+            <header>Renderizado de un componente</header>
+            <article>
+                <p>
+                    Ahora su aplicación React tiene un componente llamado Car, que devuelve un <code>&lt;h2&gt;</code>elemento.
+                </p>
+                <p>
+                    Para utilizar este componente en su aplicación, utilice una sintaxis similar a la del HTML normal: <code>&lt;Car /&gt;</code>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Componentes_de_la_clase_React">
+            <header>Componentes de la clase React</header>
+            <article>
+                <p>
+                    Antes de React 16.8, los componentes de clase eran la única forma de rastrear el estado y el ciclo de vida de un componente de React. Los componentes de la función se consideraron "sin estado".
+                </p>
+                <p>
+                    Con la adición de Hooks, los componentes Function ahora son casi equivalentes a los componentes Class. Las diferencias son tan pequeñas que probablemente nunca necesitará usar un componente Class en React.
+                </p>
+                <p>
+                    Aunque se prefieren los componentes de función, no hay planes actuales para eliminar componentes de clase de React.
+                </p>
+                <p>
+                    Esta sección le dará una descripción general de cómo usar los componentes de clase en React.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Constructor_de_componentes">
+            <header>Constructor de componentes</header>
+            <article>
+                <p>
+                    Si hay una <code>constructor()</code> función en su componente, esta función se llamará cuando se inicie el componente.
+                </p>
+                <p>
+                    La función constructora es donde inicia las propiedades del componente.
+                </p>
+                <p>
+                    En React, las propiedades de los componentes deben mantenerse en un objeto llamado <code>state</code>.
+                </p>
+                <p>
+                    Aprenderá más sobre <code>state</code> esto más adelante en este tutorial.
+                </p>
+                <p>
+                    La función constructora también es donde honras la herencia del componente principal al incluir la <code>super()</code> declaración, que ejecuta la función constructora del componente principal, y tu componente tiene acceso a todas las funciones del componente principal ( <code>React.Component</code>).
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Eventos_de_React">
+            <header>Eventos de React</header>
+            <article>
+                <p>
+                    Los eventos de reacción están escritos en sintaxis camelCase:
+                </p>
+                <p>
+                    <code>onClick</code> en lugar de <code>onclick</code>.
+                </p>
+                <p>
+                    Los controladores de eventos React están escritos entre llaves:
+                </p>
+                <p>
+                    <code>onClick={shoot}</code>  en lugar de <code>onClick="shoot()"</code>.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="referencias">
+            <header>referencias</header>
+            <article>
+                <ul>
+                    <li class="referencia">Toda la información fue sacada de <a class="link-w3school" href="https://www.w3schools.com/react/default.asp" target="_blank">W3schools</a></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <!-- Testeable FreeCodeCamp js -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

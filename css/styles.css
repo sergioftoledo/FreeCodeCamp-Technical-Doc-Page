@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,600;0,700;1,500;1,600;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.navegacion {
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: underline;
+    margin: 20px 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#navbar {
+    top: 0;
+    left: 0;
+    position: fixed;
+    min-width: 290px;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(41, 41, 41);
+    border-right: 1px solid black;
+}
+
+#navbar ul {
+    height: 90%;
+    padding: 0;
+    overflow-y: auto;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 20px;
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+#main-doc {
+    background-color: #000;
+    font-size: 1rem;
+    position: absolute;
+    margin-left: 301px;
+    padding: 0 10px 30px 0;
+}
+
+article ul {
+    margin-left: 30px;
+}
+
+article ul li {
+    color: #fff;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    color: #fff;
+    padding: 20px;
+}
+code {
+    font-style: italic;
+    background-color: #fff;
+    color: #000;
+    padding: 0 30px;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 440px;
+    text-align: center;
+}
+
+@media (max-width: 550px) {
+    img {
+        width: 370px;
+    }
+}
+
+.referencia {
+    text-transform: uppercase;
+}
+
+.link-w3school {
+    color: #fff;
+}
